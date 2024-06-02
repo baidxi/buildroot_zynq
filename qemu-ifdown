@@ -1,0 +1,4 @@
+#!/bin/sh
+ip link set dev $1 down
+ip link set dev $1 nomaster
+ip tuntap del dev $1 mode tap

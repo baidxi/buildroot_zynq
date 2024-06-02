@@ -1,0 +1,4 @@
+#!/bin/sh
+ip tuntap add dev $1 mode tap	#添加一个tap网卡
+ip link set dev $1 master virbr0	#在此之前需要创建一个bridge设备
+ip link set dev $1 up			#将网卡IP起来

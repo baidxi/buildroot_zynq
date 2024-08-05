@@ -9234,7 +9234,7 @@ Index: b/configs/xilinx_zynq_mini_defconfig
 ===================================================================
 --- /dev/null
 +++ b/configs/xilinx_zynq_mini_defconfig
-@@ -0,0 +1,166 @@
+@@ -0,0 +1,171 @@
 +CONFIG_ARM=y
 +CONFIG_SPL_SYS_DCACHE_OFF=y
 +CONFIG_SYS_L2CACHE_OFF=y
@@ -9401,3 +9401,8 @@ Index: b/configs/xilinx_zynq_mini_defconfig
 +CONFIG_QSPI_BOOT=y
 +CONFIG_SERIAL_PRESENT=y
 +# CONFIG_SPL_SERIAL_PRESENT is not set
++# CONFIG_BOOTMETH_EFILOADER is not set
++# CONFIG_BOOTM_EFI is not set
++# CONFIG_CMD_BOOTEFI is not set
++# CONFIG_CMD_BOOTEFI_BOOTMGR is not set
++# CONFIG_EFI_LOADER is not set

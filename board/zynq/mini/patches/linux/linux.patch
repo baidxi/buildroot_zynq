@@ -190,11 +190,11 @@ Index: b/arch/arm/boot/dts/zynq-mini.dts
 +	phy-handle = <&ethernet_phy>;
 +	pinctrl-names = "default";
 +	pinctrl-0 = <&pinctrl_gem0_default>;
-+	phy-reset-gpio = <&gpio0 11 0>;
++	phy-reset-gpio = <&gpio0 46 0>;
 +	phy-reset-active-low;
 +
 +	ethernet_phy: ethernet-phy@7 {
-+		reg = <7>;
++		reg = <0>;
 +		device_type = "ethernet-phy";
 +	};
 +};

@@ -25,3 +25,7 @@ sed -e "s/%LINUXIMAGE%/$(linux_image)/g" \
 	"board/zynq/mini/config/extlinux.conf" > "${BINARIES_DIR}/extlinux.conf"
 
 sed "s/%PARTUUID%/$PARTUUID/g" "board/zynq/mini/config/genimage.cfg" > "$BINARIES_DIR/genimage.cfg"
+
+if [ ! -n "$(grep -r "/dev/mmcblk0p1" $TARGET_DIR/etc/fstab)" ]; then
+	echo "/dev/mmcblk0p1	/boot	vfat	defaults 0 0" >> $TARGET_DIR/etc/fstab
+fi
